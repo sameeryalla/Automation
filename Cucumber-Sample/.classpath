@@ -7,12 +7,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry kind="lib" path="C:/Users/SAMEER YALLA/Documents/Automation/demo/Automation/Cucumber-Sample/jars/cucumber-core-6.11.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/SAMEER YALLA/Documents/Automation/demo/Automation/Cucumber-Sample/jars/cucumber-gherkin-6.11.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/SAMEER YALLA/Documents/Automation/demo/Automation/Cucumber-Sample/jars/cucumber-html-0.2.7.jar"/>
-	<classpathentry kind="lib" path="C:/Users/SAMEER YALLA/Documents/Automation/demo/Automation/Cucumber-Sample/jars/cucumber-java-6.11.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/SAMEER YALLA/Documents/Automation/demo/Automation/Cucumber-Sample/jars/cucumber-junit-6.11.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/SAMEER YALLA/Documents/Automation/demo/Automation/Cucumber-Sample/jars/cucumber-jvm-deps-1.0.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/SAMEER YALLA/Documents/Automation/demo/Automation/Cucumber-Sample/jars/cucumber-testng-6.11.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
