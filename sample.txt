@@ -5,3 +5,4 @@ Married
 Male
 AGE:33
 Working at SCB
+Need more data
