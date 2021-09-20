@@ -4,8 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
-
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -28,14 +27,14 @@ public class MyFirstStepDefinition {
 	public void user_enters_username_as(String username) {
 		driver.findElement(By.xpath("//input[@id='email']")).sendKeys(username);
 	    System.out.println("Username entered "+username);
-	    throw new io.cucumber.java.PendingException();
+	    
 	}
 	
-	@When("user enters password as {string}")
+	@And("user enters password as {string}")
 	public void user_enters_password_as(String password) {
 		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys(password);
 		System.out.println("password entered"+password);
-	    throw new io.cucumber.java.PendingException();
+	    
 	}
 
 	@Then("Signin button should be clickable")
@@ -44,21 +43,26 @@ public class MyFirstStepDefinition {
 		{System.out.println("Sign in button clickable");
 		//Assert.pass();
 		}
-	    throw new io.cucumber.java.PendingException();
+	   
 	}
 
-	@When("click on Login button")
+	@And("click on Login button")
 	public void click_on_login_button() {
 		driver.findElement(By.xpath("//button[@name='login']")).click();
 		System.out.println("cliked login button");
-	    throw new io.cucumber.java.PendingException();
+	   
 	}
 
 	@Then("invalid username and password error message check")
 	public void user_need_to_check_username_in_homepage() {
 		if(driver.findElement(By.xpath("//*[@id='loginform']/div[2]/div[2]/a")).isDisplayed())
-		{System.out.println("navigated to home page");}
-	    throw new io.cucumber.java.PendingException();
+		{System.out.println("invalid login error message came");}
+		if(driver!=null)
+		{
+			driver.close();
+			driver.quit();
+		}
+	   
 	}
 
 	
