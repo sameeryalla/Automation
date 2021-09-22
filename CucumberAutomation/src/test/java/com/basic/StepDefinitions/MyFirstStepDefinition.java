@@ -1,4 +1,4 @@
-package com.basic.FirstFeatureFile;
+package com.basic.StepDefinitions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,6 +20,7 @@ public class MyFirstStepDefinition {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\SAMEER YALLA\\Documents\\Automation\\demo\\Automation\\CucumberSetup\\chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.get("http://www.facebook.com/#");
+		driver.manage().window().maximize();
 		System.out.println("Login page openned");
 	}
 	
@@ -42,6 +43,11 @@ public class MyFirstStepDefinition {
 		if(driver.findElement(By.xpath("//button[@name='login']")).isEnabled())
 		{System.out.println("Sign in button clickable");
 		//Assert.pass();
+		}
+		if(driver!=null)
+		{
+			driver.close();
+			driver.quit();
 		}
 	   
 	}
