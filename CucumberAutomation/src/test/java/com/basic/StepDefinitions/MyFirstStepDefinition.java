@@ -24,11 +24,12 @@ public class MyFirstStepDefinition {
 		System.out.println("Login page openned");
 	}
 	
-	@When("user enters username as {string}")
-	public void user_enters_username_as(String username) {
+	@When("user enters username as {string} and password as {string}")
+	public void user_enters_username_as(String username,String password) {
 		driver.findElement(By.xpath("//input[@id='email']")).sendKeys(username);
 	    System.out.println("Username entered "+username);
-	    
+	    driver.findElement(By.xpath("//input[@id='pass']")).sendKeys(password);
+	    System.out.println("password entered"+password);
 	}
 	
 	@And("user enters password as {string}")
@@ -38,20 +39,18 @@ public class MyFirstStepDefinition {
 	    
 	}
 
+	@SuppressWarnings("deprecation")
 	@Then("Signin button should be clickable")
 	public void signin_button_should_be_clickable() {
 		if(driver.findElement(By.xpath("//button[@name='login']")).isEnabled())
 		{System.out.println("Sign in button clickable");
-		//Assert.pass();
+		Assert.assertEquals(true, true);
 		}
-		if(driver!=null)
-		{
-			driver.close();
-			driver.quit();
-		}
+		
 	   
 	}
 
+	
 	@And("click on Login button")
 	public void click_on_login_button() {
 		driver.findElement(By.xpath("//button[@name='login']")).click();
@@ -63,10 +62,19 @@ public class MyFirstStepDefinition {
 	public void user_need_to_check_username_in_homepage() {
 		if(driver.findElement(By.xpath("//*[@id='loginform']/div[2]/div[2]/a")).isDisplayed())
 		{System.out.println("invalid login error message came");}
+		
+	   
+	}
+	
+
+	@Then("close the browser")
+	public void close_the_browser() {
+		
 		if(driver!=null)
 		{
 			driver.close();
 			driver.quit();
+			driver=null;
 		}
 	   
 	}
