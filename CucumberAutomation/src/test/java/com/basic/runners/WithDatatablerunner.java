@@ -9,8 +9,8 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		         monochrome=true,
 		         //dryRun=true,
-		         features= {"src/test/resources/com/basic/FeatureFile/"},
-                 glue= {"com.basic.StepDefinitions"},   
+		         features= {"src/test/resources/com/basic/DatatableFF/"},
+                 glue= {"com.basic.DatatableSD"},   
 		      		plugin= {"pretty",
 		      				  "html:target/cucumber-htmlreport.html",
 		      				  "json:target/cucumber-report.json"
@@ -18,7 +18,7 @@ import io.cucumber.junit.CucumberOptions;
 		      		        }          
 		)
 
-public class Testrunner {
+public class WithDatatablerunner {
 	
 
 }
