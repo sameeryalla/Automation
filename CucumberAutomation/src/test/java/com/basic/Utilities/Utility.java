@@ -8,24 +8,36 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utility {
 
 	 public static String fetchPropertyValue(String key) throws IOException
 	 {
-		 Properties property=new Properties();
+		try { Properties property=new Properties();
 		 FileInputStream fis=new FileInputStream("./config/config.properties");
 		 property.load(fis);
-		 return property.get(key).toString();
+		 return property.get(key).toString();}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return  null;
+		}
 		 
 	 }
 	 public static String fetchLocatorValue(String key) throws IOException
 	 {
-		 Properties property=new Properties();
+		 try{Properties property=new Properties();
 		 FileInputStream fis=new FileInputStream("./config/objrepo.properties");
 		 property.load(fis);
-		 return property.get(key).toString();
+		 return property.get(key).toString();}
 		 
+		 catch(Exception e)
+			{
+				e.printStackTrace();
+				return  null;
+			}
 	 }
 	 
 	 
@@ -81,6 +93,35 @@ public class Utility {
 		 {
 			 e.getStackTrace();
 			 System.out.println("not moved to the element:"+locator);
+		 }
+	 }
+	 
+	 public static void WaitUntilElementAppears(WebDriver driver,String locator,int waittime)
+	 {
+		 System.out.println("Entered in to wait method to check element "+locator+" appeared or not");
+		 try {
+			 WebDriverWait wait=new WebDriverWait(driver,waittime);
+			 wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(locator))));
+			 
+		 }
+		 catch(Exception e){
+
+			 e.getStackTrace();
+			 System.out.println("Element not loaded :"+locator); 
+		 }
+	 }
+	 public static void WaitUntilElementClickable(WebDriver driver,String locator,int waittime)
+	 {
+		 System.out.println("Entered in to wait method to check element "+locator+" appeared or not");
+		 try {
+			 WebDriverWait wait=new WebDriverWait(driver,waittime);
+			 wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(locator))));
+			 Thread.sleep(1000);
+		 }
+		 catch(Exception e){
+
+			 e.getStackTrace();
+			 System.out.println("Element not loaded :"+locator); 
 		 }
 	 }
 	 

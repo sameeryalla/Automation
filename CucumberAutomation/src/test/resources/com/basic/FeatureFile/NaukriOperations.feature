@@ -10,10 +10,13 @@ And user enters naukri username as "sameer.cse58@gmail.com" and password as "ram
 Then Naukri Signin button should be clickable
 Then close the Nbrowser
 
-Scenario: Validate user Logged in to Naukri and confirm username.
+Scenario Outline: Validate user Logged in to Naukri and confirm username.
 Given user need to be navigate to naukri login page
 When click on Naukri login button
-And user enters naukri username as "sameer.cse58@gmail.com" and password as "ramu2127@"
+And user enters naukri username as "<username>" and password as "<password>"
 And click on Naukri 2nd login button
-Then check the "Sameer Yalla" on home page
+Then check the "<pname>" on home page
 Then close the Nbrowser
+Examples:
+| username | password | pname |
+|sameer.cse58@gmail.com|ramu2127@|Sameer Yalla|
