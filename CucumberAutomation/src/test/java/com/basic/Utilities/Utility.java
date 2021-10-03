@@ -1,5 +1,7 @@
 package com.basic.Utilities;
 
+
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -11,11 +13,14 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 public class Utility {
 
+
+	
 	 public static String fetchPropertyValue(String key) throws IOException
 	 {
-		try { Properties property=new Properties();
+		 try { Properties property=new Properties();
 		 FileInputStream fis=new FileInputStream("./config/config.properties");
 		 property.load(fis);
 		 return property.get(key).toString();}
@@ -28,6 +33,7 @@ public class Utility {
 	 }
 	 public static String fetchLocatorValue(String key) throws IOException
 	 {
+		
 		 try{Properties property=new Properties();
 		 FileInputStream fis=new FileInputStream("./config/objrepo.properties");
 		 property.load(fis);

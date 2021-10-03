@@ -10,8 +10,8 @@ import io.cucumber.junit.CucumberOptions;
 		         monochrome=true,
 		         //dryRun=true,
 		        		 
-		         features= {"src/test/resources/com/basic/DatatableFF/"},
-                 glue= {"com.basic.DatatableSD"},   
+		         features= {"src/test/resources/com/basic/HooksFFPKG/"},
+                 glue= {"com.basic.HooksSDPKG"},   
 		      		plugin= {"pretty",
 		      				  "html:target/cucumber-htmlreport.html",
 		      				  "json:target/cucumber-report.json"
@@ -21,7 +21,7 @@ import io.cucumber.junit.CucumberOptions;
 		         
 		)
 
-public class WithDatatablerunner {
+public class Hooksrunner {
 	
 
 }

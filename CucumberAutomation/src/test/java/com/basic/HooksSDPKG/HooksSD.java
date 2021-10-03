@@ -1,4 +1,4 @@
-package com.basic.DatatableSD;
+package com.basic.HooksSDPKG;
 
 import java.io.IOException;
 import java.util.Iterator;
@@ -6,8 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.junit.After;
-import org.junit.Before;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,17 +15,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import com.basic.Utilities.Utility;
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import junit.framework.Assert;
 
-public class NaukriOperationswithDatatable {
+public class HooksSD {
 
-	public WebDriver driver;
+	WebDriver driver=null;
+	String url=null;
+	//String reltiveURL=null;
 	
-	
+	@Before
 	public void driverInitialize()
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\SAMEER YALLA\\Documents\\Automation\\demo\\Automation\\CucumberSetup\\chromedriver.exe");
@@ -35,10 +38,11 @@ public class NaukriOperationswithDatatable {
 	}
 
 	@Given("user need to be navigate to naukri login page")
-	public void OpenFBLoginPage()
+	public void OpenFBLoginPage() throws IOException
 	{
-		driverInitialize();
-		driver.get("https://www.naukri.com/nlogin/login");
+		url=Utility.fetchPropertyValue("applicationURL");
+		
+		driver.get(url);
 		// It will return the parent window name as a String
 				String parent=driver.getWindowHandle();
 
@@ -166,7 +170,18 @@ public class NaukriOperationswithDatatable {
 	}
 	
 
-
+	@After
+	public void close_the_browser() {
+		
+		if(driver!=null)
+		{
+			driver.close();
+			driver.quit();
+			driver=null;
+		}
+	   
+	}
+	
 	
 	
 }
