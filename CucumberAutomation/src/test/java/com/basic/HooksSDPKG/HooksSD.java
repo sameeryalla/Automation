@@ -14,6 +14,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.basic.Utilities.Utility;
 
+import Hooks.SharedClass;
+import Testbase.testbase;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -25,22 +27,17 @@ import junit.framework.Assert;
 
 public class HooksSD {
 
-	WebDriver driver=null;
-	String url=null;
-	//String reltiveURL=null;
-	
-	@Before
-	public void driverInitialize()
-	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\SAMEER YALLA\\Documents\\Automation\\demo\\Automation\\CucumberSetup\\chromedriver.exe");
-		driver=new ChromeDriver();
-		driver.manage().window().maximize();
-	}
+	WebDriver driver;
 
+	public HooksSD(SharedClass share)
+	{
+		driver=share.SetUp();
+	}
+		
 	@Given("user need to be navigate to naukri login page")
 	public void OpenFBLoginPage() throws IOException
 	{
-		url=Utility.fetchPropertyValue("applicationURL");
+		String url=Utility.fetchPropertyValue("applicationURL");
 		
 		driver.get(url);
 		// It will return the parent window name as a String
@@ -170,17 +167,6 @@ public class HooksSD {
 	}
 	
 
-	@After
-	public void close_the_browser() {
-		
-		if(driver!=null)
-		{
-			driver.close();
-			driver.quit();
-			driver=null;
-		}
-	   
-	}
 	
 	
 	

@@ -1,4 +1,4 @@
-Feature: Naukri portal operations
+Feature: Naukri portal operations2
 As a user I want to login Naukri and check latest job postings
 
 
