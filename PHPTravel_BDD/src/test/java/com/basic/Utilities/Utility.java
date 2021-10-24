@@ -47,6 +47,25 @@ public class Utility {
 	 }
 	 
 	 
+	 public static String getText(WebDriver driver,String key)
+	 {
+		 String locator=key.split("~")[0];
+		 try
+		 {
+			 String value=driver.findElement(By.xpath(locator)).getText();
+			 System.out.println("given element: "+locator+" picked value:"+value);
+			 return value;
+		 }
+		 catch(Exception e)
+		 {
+			 e.getStackTrace();
+			 System.out.println("not clicked the element: "+locator);
+			 return null;
+		 }
+		 
+		 
+	 }
+	 
 	 public static boolean clickElement(WebDriver driver,String key)
 	 {
 		 String locator=key.split("~")[0];

@@ -16,7 +16,7 @@ import io.cucumber.junit.CucumberOptions;
      				  "json:target/cucumber-report.json",
      				 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:target/cucumber-extreport.html"
      				  },
-     		tags= "@sameer"
+     		tags= "@Flights"
 		)
 public class Testrunner {
 	

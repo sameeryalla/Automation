@@ -28,6 +28,20 @@ public class HomePage{
 	{
 		Utility.clickElement(driver, Utility.fetchLocatorValue("Homepage_LoginButton"));
 	}
+
+	public void LanguageCheck() throws IOException {
+		if(Utility.getText(driver, Utility.fetchLocatorValue("Homepage_Languageselected"))!="English")
+		{
+			Utility.clickElement(driver, Utility.fetchLocatorValue("Homepage_Languageselected"));
+			Utility.clickElement(driver, Utility.fetchLocatorValue("Homepage_SelectEnglish"));
+			
+		}
+		else
+		{
+			System.out.println("Already English language selected");
+		}
+		
+	}
 	
 	
 	

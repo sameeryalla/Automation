@@ -21,4 +21,10 @@ public class DashboardPage {
 		return Utility.WaitUntilElementAppears(driver, Utility.fetchLocatorValue("DashboardPage_note"), 20);
 	}
 	
+	public boolean clickonDashboardtab(String tabName) throws IOException
+	{
+		String flightTab=Utility.fetchLocatorValue("DashboardPage_tabs").replace("dummy",tabName);
+		return Utility.clickElement(driver, flightTab);
+	}
+	
 }

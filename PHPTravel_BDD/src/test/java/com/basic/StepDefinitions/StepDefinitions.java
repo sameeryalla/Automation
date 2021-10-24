@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.basic.Utilities.Utility;
 import com.basic.pages.DashboardPage;
+import com.basic.pages.FlightsPage;
 import com.basic.pages.HomePage;
 import com.basic.pages.LoginPage;
 
@@ -26,6 +27,7 @@ public class StepDefinitions {
 	HomePage objHomePage;
     LoginPage objLoginPage;
     DashboardPage objDBPage;
+    FlightsPage objFlightsPage;
 	
     
 	
@@ -39,7 +41,7 @@ public class StepDefinitions {
 			String driverpath = path + "\\driver\\chromedriver.exe";
 			System.setProperty("webdriver.chrome.driver",driverpath );
 			driver=new ChromeDriver();
-			   driver.manage().window().maximize();
+			driver.manage().window().maximize();
 		  }
 		return driver;
 	}
@@ -48,7 +50,8 @@ public class StepDefinitions {
 	public void user_is_on_php_travel_home_page() throws IOException {
 	           
 		driver.get(Utility.fetchPropertyValue("applicationURL"));
-		objHomePage=new HomePage(driver);		
+		objHomePage=new HomePage(driver);	
+		objHomePage.LanguageCheck();
 		objHomePage.Loginbuttonisclickable();
 	}
 	@And("Clicking login button to navigate Login page")
@@ -117,8 +120,25 @@ public class StepDefinitions {
 	}
 	
 	
-
+	@When("user click on {string} tab in dashboard should navigate to tours page")
+	public void user_click_on_tab_in_dashboard_should_navigate_to_tours_page(String tab)throws IOException {
 		
+	    objDBPage=new DashboardPage(driver);
+	    objDBPage.clickonDashboardtab(tab);
+	    
+	}
+	@When("enter {string} and {string} then click on search to get flights list")
+	public void enter_from_and_to_then_click_on_search_to_get_flights_list(String fromCity,String toCity) throws IOException{
+	    
+		objFlightsPage=new FlightsPage(driver);
+		objFlightsPage.searchFlights(fromCity, toCity);
+	}
+	@Then("verify the flight list and update to data sheet")
+	public void verify_the_flight_list_and_update_to_data_sheet()throws IOException {
+	    
+		
+	}
+	
 	
 	
 	@After
