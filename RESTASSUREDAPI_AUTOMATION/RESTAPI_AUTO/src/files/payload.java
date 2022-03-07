@@ -34,4 +34,37 @@ public class payload {
 				"}\r\n" +
 				"";
 	}
+	
+	public static String CoursePrice()
+	{
+		return "{\r\n" + 
+				"  \"dashboard\": {\r\n" + 
+				"    \"purchaseamount\":\"910\",\r\n" + 
+				"    \"website\":\"rahulshettyacademy\"\r\n" + 
+				"  },\r\n" + 
+				"  \"courses\": [\r\n" + 
+				"    {\r\n" + 
+				"      \"title\":\"selenium python\",\r\n" + 
+				"      \"price\":\"50\",\r\n" + 
+				"      \"copies\":\"6\"\r\n" + 
+				"    },\r\n" + 
+				"    {\r\n" + 
+				"      \"title\":\"cypress\",\r\n" + 
+				"      \"price\":\"40\",\r\n" + 
+				"      \"copies\":\"4\"\r\n" + 
+				"    },\r\n" + 
+				"    {\r\n" + 
+				"      \"title\":\"RPA\",\r\n" + 
+				"      \"price\":\"20\",\r\n" + 
+				"      \"copies\":\"10\"\r\n" + 
+				"    },\r\n" + 
+				"    {\r\n" + 
+				"      \"title\":\"Appium\",\r\n" + 
+				"      \"price\":\"25\",\r\n" + 
+				"      \"copies\":\"10\"\r\n" + 
+				"    }\r\n" + 
+				"    ]\r\n" + 
+				"}";
+	}
+	
 }

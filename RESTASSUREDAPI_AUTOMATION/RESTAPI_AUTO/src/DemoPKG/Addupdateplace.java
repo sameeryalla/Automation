@@ -17,7 +17,7 @@ public class Addupdateplace {
 		// TODO Auto-generated method stub
 		RestAssured.baseURI="https://rahulshettyacademy.com";
 		
-		//post records and validate
+		//POST records and validate
 		String response=given().log().all().queryParam("key", "qaclick123").header("Content-Type", "application/json").body(payload.AddPlace())
 		.when().post("/maps/api/place/add/json")
 		.then().log().all().assertThat().statusCode(200).body("scope", equalTo("APP"))
@@ -31,7 +31,7 @@ public class Addupdateplace {
 		
 		System.out.println(placeID); 
 		//System.out.println(payload.UpdatePlace(placeID));
-		//update records and validate
+		//update(PUT) records and validate
 		given().log().all().queryParam("key", "qaclick123").header("Content-Type", "application/json").body(payload.UpdatePlace(placeID))
 				.when().put("/maps/api/place/update/json")
 				.then().log().all().assertThat().statusCode(200).body("msg", equalTo("Address successfully updated"))
