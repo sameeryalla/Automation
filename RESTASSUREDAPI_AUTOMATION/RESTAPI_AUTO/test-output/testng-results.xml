@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-07T11:44:05 IST" name="Default suite" finished-at="2022-03-07T11:44:08 IST" duration-ms="2069">
+  <suite started-at="2022-03-30T07:05:04 IST" name="Default suite" finished-at="2022-03-30T07:05:08 IST" duration-ms="4090">
     <groups>
     </groups>
-    <test started-at="2022-03-07T11:44:05 IST" name="Default test" finished-at="2022-03-07T11:44:08 IST" duration-ms="2069">
-      <class name="DemoPKG.SumValidation">
-        <test-method signature="courseSumValidation()[pri:0, instance:DemoPKG.SumValidation@4690b489]" started-at="2022-03-07T11:44:06 IST" name="courseSumValidation" finished-at="2022-03-07T11:44:08 IST" duration-ms="2010" status="PASS">
+    <test started-at="2022-03-30T07:05:04 IST" name="Default test" finished-at="2022-03-30T07:05:08 IST" duration-ms="4090">
+      <class name="JIRA_API.JiraTest">
+        <test-method signature="validateissuecreation()[pri:0, instance:JIRA_API.JiraTest@460d0a57]" started-at="2022-03-30T07:05:04 IST" name="validateissuecreation" finished-at="2022-03-30T07:05:08 IST" duration-ms="4031" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- courseSumValidation -->
-      </class> <!-- DemoPKG.SumValidation -->
+        </test-method> <!-- validateissuecreation -->
+      </class> <!-- JIRA_API.JiraTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

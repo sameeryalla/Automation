@@ -67,4 +67,21 @@ public class payload {
 				"}";
 	}
 	
+	public static String AddUser(String str1, String str2)
+	{
+		return "{\r\n" + 
+				"    \"name\": \""+str1+"\",\r\n" + 
+				"    \"job\": \""+str2+"\"\r\n" + 
+				"}";
+	}
+	
+	
+	public static String Login(String str1, String str2)
+	{
+		return "{\r\n" + 
+				"    \"username\": \""+str1+"\",\r\n" + 
+				"    \"password\": \""+str2+"\"\r\n" + 
+				"}";
+	}
+	
 }

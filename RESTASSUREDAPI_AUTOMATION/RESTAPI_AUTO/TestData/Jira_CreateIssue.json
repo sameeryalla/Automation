@@ -1,0 +1,12 @@
+{
+    "fields":{
+        "project":{
+            "key":"RSA"
+        },
+        "summary":"Issue 18:Jira issue creation from RestAssured code",
+        "description":"Issue 18:Jira issue creation from RestAssured code",
+        "issuetype":{
+            "name":"Bug"
+        }
+    }
+}
