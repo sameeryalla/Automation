@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-workspace name="RESTAPI-SOAPUI" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:project name="RESTSOAPUI_TRAINING">C:/Users/SAMEER YALLA/Documents/Automation/demo/Automation/RESTAPI-soapui/RESTSOAPUI-TRAINING-soapui-project.xml</con:project>
+  <con:collectInfoForSupport>false</con:collectInfoForSupport>
+</con:soapui-workspace>
