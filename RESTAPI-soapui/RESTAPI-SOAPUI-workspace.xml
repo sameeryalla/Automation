@@ -2,5 +2,7 @@
 <con:soapui-workspace name="RESTAPI-SOAPUI" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:project name="RESTSOAPUI_TRAINING">C:/Users/SAMEER YALLA/Documents/Automation/demo/Automation/RESTAPI-soapui/RESTSOAPUI-TRAINING-soapui-project.xml</con:project>
+  <con:project name="DUMMYRESTAPI">C:/Users/SAMEER YALLA/Documents/Automation/demo/Automation/RESTAPI-soapui/DUMMYRESTAPI-soapui-project.xml</con:project>
+  <con:project name="Httpbin.org">C:/Users/SAMEER YALLA/Documents/Automation/demo/Automation/RESTAPI-soapui/Httpbin-org-soapui-project.xml</con:project>
   <con:collectInfoForSupport>false</con:collectInfoForSupport>
 </con:soapui-workspace>
