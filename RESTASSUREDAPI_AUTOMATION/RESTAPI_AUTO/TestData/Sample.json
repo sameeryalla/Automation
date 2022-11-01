@@ -1,0 +1,34 @@
+{
+  "Company":"Sameer Co",
+  "Empployees":[{
+    "Name":"Sameer",
+    "Age":"35",
+    "Designation":"Test Manager",
+    "Skills":{
+      "skill1":"java",
+      "skill2":"Selenium",
+      "skill3":"API"
+    }
+  },
+  {"Name":"Pradeep",
+    "Age":"32",
+    "Designation":"Test Manager",
+    "Skills":{
+      "skill1":"java",
+      "skill2":"Selenium",
+      "skill3":"NA" 
+    }
+  },
+  {"Name":"Bala",
+    "Age":"26",
+    "Designation":"Analyst",
+    "Skills":{
+      "skill1":"java",
+      "skill2":"Selenium",
+      "skill3":"NA"
+    }
+    
+  }
+  ],
+  "company HR":"samco@hr.com" 
+}
