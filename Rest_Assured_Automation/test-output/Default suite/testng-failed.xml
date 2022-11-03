@@ -5,7 +5,7 @@
     <classes>
       <class name="getting_started.basic_get_request">
         <methods>
-          <include name="simple_get_requests_jsonvalidation2"/>
+          <include name="validate_status_line"/>
         </methods>
       </class> <!-- getting_started.basic_get_request -->
     </classes>

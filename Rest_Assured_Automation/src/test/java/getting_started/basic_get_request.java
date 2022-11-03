@@ -2,7 +2,10 @@ package getting_started;
 
 import org.testng.annotations.Test;
 
+import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.response.ResponseBody;
 
 import static io.restassured.RestAssured.*;
 
@@ -76,6 +79,62 @@ public class basic_get_request {
 	    		  "current.city.timezone",equalTo("19800")
 
 	    		  );
+  }
+  
+  @Test
+  public void extract_response_data()
+  {
+	RestAssured.baseURI="";
+	
+	Response res=     given()
+         .baseUri("https://restcountries.com/v3.1").
+    when()
+         .get("/alpha/USA").
+    then()
+         .log().all().extract().response();
+	System.out.println(res.asString());
+	
+	
+  }
+  
+  @Test
+  public void extract_single_data()
+  {
+	  String temp=given()
+	        .baseUri("https://api.openweathermap.org/data/2.5")
+	        .queryParam("q","Delhi")
+	        .queryParam("APPID", "f71eea6de1eac7b9b0cb5e6ac9d1f2a1")
+	        .queryParam("mode", "xml").
+	  when()
+	       .get("/weather").
+	 then().log().all().statusCode(200)
+     .body(
+   		  "current.city.@name",equalTo("Delhi"),
+   		  "current.city.country",equalTo("IN"),
+   		  "current.city.timezone",equalTo("19800")
+
+   		  )
+	      .extract().path("current.temperature.@value");
+	  
+	  System.out.println("Temperature in Delhi: "+temp);
+	  
+  }
+  
+  @Test
+  public void validate_status_line()
+  {
+	RestAssured.baseURI="";
+	
+	Response res=     given()
+         .baseUri("https://api.printful.com").
+    when()
+         .get("/variant/1").
+    then()
+         .log().all().statusLine("HTTP/1.1 404 Not Found")
+         .extract().response();
+	System.out.println(res.asString());
+	
+	
   }
   
   
