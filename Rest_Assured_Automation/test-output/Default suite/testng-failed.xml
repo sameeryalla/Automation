@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="getting_started.basic_get_request">
+      <class name="request_parameters.request_parameters">
         <methods>
-          <include name="validate_status_line"/>
+          <include name="handling_multiplevalues_parameter"/>
         </methods>
-      </class> <!-- getting_started.basic_get_request -->
+      </class> <!-- request_parameters.request_parameters -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
