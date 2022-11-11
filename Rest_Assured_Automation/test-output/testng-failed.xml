@@ -5,7 +5,7 @@
     <classes>
       <class name="request_parameters.request_parameters">
         <methods>
-          <include name="handling_multiplevalues_parameter"/>
+          <include name="handling_multiple_params"/>
         </methods>
       </class> <!-- request_parameters.request_parameters -->
     </classes>

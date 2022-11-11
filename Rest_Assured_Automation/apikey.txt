@@ -10,4 +10,17 @@ C:\Users\SAMEER YALLA\Documents\Automation\demo\Automation\Rest_Assured_Automati
 
 
 
-fixer api key : ANigufqNgQhbRS7vj9zLKcU7Bw4Z7GGn
+fixer api key : ZCh2RwF9gI5k03c9LV8ZuxOth26WbrEa
+
+URL: https://api.apilayer.com/fixer
+
+https://api.apilayer.com/fixer/convert
+    ? access_key = API_KEY
+    & from = GBP
+    & to = JPY
+    & amount = 25
+	
+	
+	
+	
+	
