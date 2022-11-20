@@ -3,10 +3,12 @@ package HeadersNCookies;
 import static io.restassured.RestAssured.given;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import org.testng.annotations.Test;
 import io.restassured.http.ContentType;
 import io.restassured.http.Cookie;
+import io.restassured.http.Headers;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
@@ -104,6 +106,84 @@ public class Headers_And_Cookies {
 	  then()
 	        .log().all()
 	        .statusCode(200);        
+  }
+  
+  @Test
+  public void validate_response_header() {
+	  
+	  Cookie cookie=new Cookie.Builder("usertype","int").setSecured(true).setComment("cookie testing").build();
+	  HashMap<String, Object> map=new HashMap<String, Object>();
+	  map.put("apikey", "ZCh2RwF9gI5k03c9LV8ZuxOth26WbrEa");
+	  map.put("Symbols", "USD");
+	  
+	  given()
+	        .baseUri("https://api.apilayer.com/fixer")
+	        .queryParams(map)
+	        .cookie(cookie).
+	  when()
+	        .get("/latest").
+	  then()
+	        .log().all()
+	        .header("Server","cloudflare");        
+  }
+  
+  @Test
+  public void extract_response_header() {
+	  
+	  //Cookie cookie=new Cookie.Builder("usertype","int").setSecured(true).setComment("cookie testing").build();
+	  HashMap<String, Object> map=new HashMap<String, Object>();
+	  map.put("apikey", "ZCh2RwF9gI5k03c9LV8ZuxOth26WbrEa");
+	  map.put("Symbols", "USD");
+	  
+	  Headers headers=given()
+	        .baseUri("https://api.apilayer.com/fixer")
+	        .queryParams(map).
+	        //.cookie(cookie).
+	  when()
+	        .get("/latest").
+	  then()
+	        .log().all()
+	        .extract().headers();
+	  System.out.println(headers.getValue("CF-Ray"));
+	  System.out.println(headers.getValue("CF-Cache-Status"));
+	  System.out.println(headers.getValue("RateLimit-Remaining"));
+  }
+  
+  @Test
+  public void extract_response_cookies() {
+	  
+	  Cookie cookie=new Cookie.Builder("usertype","int").setSecured(true).setComment("cookie testing").build();
+	  HashMap<String, Object> map=new HashMap<String, Object>();
+	  map.put("apikey", "ZCh2RwF9gI5k03c9LV8ZuxOth26WbrEa");
+	  map.put("Symbols", "USD");
+	  
+	  Map<String,String> cookies=given()
+	        .baseUri("https://api.apilayer.com/fixer")
+	        .queryParams(map)
+	        .cookie(cookie).
+	  when()
+	        .get("/latest").
+	  then()
+	        .log().all()
+	        .extract().cookies();
+	  System.out.println(cookies.get("__cfduid"));
+  }
+  
+  @Test
+  public void extract_response_cookies2() {
+	  
+	  
+	  Map<String,String> cookies=given()
+		        .baseUri("https://postman-echo.com")
+		        .auth().basic("postman", "password").
+	 
+	 
+	  when()
+	        .get("/basic-auth").
+	  then()
+	        .log().all()
+	        .extract().cookies();
+	  System.out.println(cookies.get("sails.sid"));
   }
   
 }

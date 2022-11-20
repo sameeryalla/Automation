@@ -22,5 +22,9 @@ https://api.apilayer.com/fixer/convert
 	
 	
 	
+	set-cookie: sails.sid=s%3Ady9mW1rh5VwNNjaQePmyS6-oIN1aaqx9.LI6WTHiG%2BQtPfOA8MHbgvVBcLPfbDFwDW3vKMyI%2FdWU; Path=/; HttpOnly
+
+	
+	
 	
 	

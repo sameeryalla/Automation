@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="request_parameters.request_parameters">
+      <class name="auth.Auth">
         <methods>
-          <include name="handling_multiple_params"/>
+          <include name="paypal_test"/>
         </methods>
-      </class> <!-- request_parameters.request_parameters -->
+      </class> <!-- auth.Auth -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,16 +2,16 @@
 <testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-11T09:04:03 IST" name="Default suite" finished-at="2022-11-11T09:04:05 IST" duration-ms="2437">
+  <suite started-at="2022-11-20T13:27:28 IST" name="Default suite" finished-at="2022-11-20T13:27:37 IST" duration-ms="8523">
     <groups>
     </groups>
-    <test started-at="2022-11-11T09:04:03 IST" name="Default test" finished-at="2022-11-11T09:04:05 IST" duration-ms="2437">
-      <class name="HeadersNCookies.Headers_And_Cookies">
-        <test-method signature="sending_request_cookies_builder()[pri:0, instance:HeadersNCookies.Headers_And_Cookies@27ce24aa]" started-at="2022-11-11T09:04:03 IST" name="sending_request_cookies_builder" finished-at="2022-11-11T09:04:05 IST" duration-ms="2393" status="PASS">
+    <test started-at="2022-11-20T13:27:28 IST" name="Default test" finished-at="2022-11-20T13:27:37 IST" duration-ms="8523">
+      <class name="auth.Auth">
+        <test-method signature="paypal_test()[pri:0, instance:auth.Auth@647e447]" started-at="2022-11-20T13:27:28 IST" name="paypal_test" finished-at="2022-11-20T13:27:37 IST" duration-ms="8441" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sending_request_cookies_builder -->
-      </class> <!-- HeadersNCookies.Headers_And_Cookies -->
+        </test-method> <!-- paypal_test -->
+      </class> <!-- auth.Auth -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
