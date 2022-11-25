@@ -21,8 +21,7 @@ https://api.apilayer.com/fixer/convert
     & amount = 25
 	
 	
-	
-	set-cookie: sails.sid=s%3Ady9mW1rh5VwNNjaQePmyS6-oIN1aaqx9.LI6WTHiG%2BQtPfOA8MHbgvVBcLPfbDFwDW3vKMyI%2FdWU; Path=/; HttpOnly
+	Paypal access token: "access_token": "A21AALhaM5FpLFSwPkzW_DZtvkZag_e7fuVyCJno8kT7ar_rX9Rb_CrpKFw18PA8SFpA9uinvO-sliA_z8-GhozjOVPsBvkmQ",
 
 	
 	

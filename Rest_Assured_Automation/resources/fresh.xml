@@ -1,0 +1,22 @@
+<current>
+  <city id="1273294" name="Delhi">
+    <coord lon="77.2167" lat="28.6667"/>
+    <country>IN</country>
+    <timezone>19800</timezone>
+    <sun rise="2022-11-25T01:21:45" set="2022-11-25T11:54:40"/>
+  </city>
+  <temperature value="286.2" min="286.2" max="286.2" unit="kelvin"/>
+  <feels_like value="285.54" unit="kelvin"/>
+  <humidity value="76" unit="%"/>
+  <pressure value="1018" unit="hPa"/>
+  <wind>
+    <speed value="0" unit="m/s" name="Setting"/>
+    <gusts/>
+    <direction/>
+  </wind>
+  <clouds value="13" name="few clouds"/>
+  <visibility value="1500"/>
+  <precipitation mode="no"/>
+  <weather number="701" value="mist" icon="50d"/>
+  <lastupdate value="2022-11-25T03:00:55"/>
+</current>

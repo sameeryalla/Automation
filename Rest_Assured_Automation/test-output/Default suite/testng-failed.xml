@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="auth.Auth">
+      <class name="schema_validation.Schema_Validation">
         <methods>
-          <include name="paypal_test"/>
+          <include name="xml_xsd_schema_validation"/>
         </methods>
-      </class> <!-- auth.Auth -->
+      </class> <!-- schema_validation.Schema_Validation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -53,6 +53,7 @@ public class Auth {
   @Test
   public void paypal_test()
   {
+	  //to get the token
 	 String paypal_accesstoken=""; 
 	 paypal_accesstoken=given()
 	        .baseUri("https://api-m.sandbox.paypal.com/v1")
@@ -67,7 +68,7 @@ public class Auth {
 	       .log().all()
 	       .statusCode(200)
 	       .extract().path("access_token");
-	 
+	 //using above token to generate the invoice
 	 given()
 	       .baseUri("https://api-m.sandbox.paypal.com/v2")
 	       .contentType("application/json;UTF-8")
