@@ -1,0 +1,13 @@
+{
+    "request":{
+	"method":"GET",
+	"urlPattern":"/get-article/bash"
+	},
+    "response": {
+        "status": 200,
+        "bodyFileName": "file3.json",
+		"headers":{
+		  "Content-Type":"application/json"
+		}
+    }	
+}
