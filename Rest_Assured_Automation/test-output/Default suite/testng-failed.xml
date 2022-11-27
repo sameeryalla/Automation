@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="schema_validation.Schema_Validation">
+      <class name="misc_operations.Misc">
         <methods>
-          <include name="xml_xsd_schema_validation"/>
+          <include name="validate_response_time"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- schema_validation.Schema_Validation -->
+      </class> <!-- misc_operations.Misc -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

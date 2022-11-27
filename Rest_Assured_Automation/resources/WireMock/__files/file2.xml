@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- dezlearn.xml -->
+<student xmlns:perctg="https://dezlearn.com/calculate-percentage">
+   <score>369</score>
+   <perctg:score>92.25%</perctg:score>
+   <grouping>299</grouping>
+   <perctg:grouping>99.66%</perctg:grouping>
+</student>
