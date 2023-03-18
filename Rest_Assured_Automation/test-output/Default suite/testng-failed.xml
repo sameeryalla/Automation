@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="misc_operations.Misc">
+      <class name="auth.Auth">
         <methods>
-          <include name="validate_response_time"/>
-          <include name="setup"/>
+          <include name="post_a_tweet"/>
         </methods>
-      </class> <!-- misc_operations.Misc -->
+      </class> <!-- auth.Auth -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
