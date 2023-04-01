@@ -1,0 +1,9 @@
+Hello World !
+This is Sameer Yalla
+My Mail id sameeryalla@gmail.com
+Married
+Male
+AGE:33
+Working at SCB
+Need more data
+sample
