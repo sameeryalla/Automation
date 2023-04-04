@@ -38,6 +38,6 @@ public class HashMapImpl {
 		}
 		
 		hm.forEach((k,v)->System.out.println(+k+" value is: "+v));
-	}
+	}  
 
 }
