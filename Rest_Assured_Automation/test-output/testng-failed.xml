@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="auth.Auth">
+      <class name="getting_started.basic_get_request">
         <methods>
-          <include name="post_a_tweet"/>
+          <include name="simple_get_requests_jsonvalidation2"/>
         </methods>
-      </class> <!-- auth.Auth -->
+      </class> <!-- getting_started.basic_get_request -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
