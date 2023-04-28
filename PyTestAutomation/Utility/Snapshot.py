@@ -1,4 +1,4 @@
 
-
 class B:
-    print ("")
+    def takeScreenshot(self):
+        print ("Taking Screenshot")
