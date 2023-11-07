@@ -1,0 +1,32 @@
+---
+- name: This play is to download the latest war file from nexus
+  hosts: docker
+  become: true
+  vars_files: 
+    - /opt/playbooks/variables.yml
+
+  tasks:
+    - name: download the war file
+      shell: 'curl -u admin:admin123 -L "http://172.20.10.142:8081/service/rest/v1/search/assets/download?sort=version&repository=VinaysDevOpsLab-RELEASE&maven.groupId=com.vinaysdevopslab&maven.artifactId=VinayDevOpsLab&maven.extension=war" -H "accept: application/json" --output /home/ansibleadmin/latest.war'
+      args:
+        chdir: "{{ changedir_location }}"
+
+    - name: create docker file with content
+      copy: 
+        dest: /home/ansibleadmin/Dockerfile
+        content: 
+              FROM tomcat:latest
+              LABEL Author = "Sameer Yalla"
+              ADD ./latest.war /usr/local/tomcat/webapps
+              RUN chmod -x $CATALINA_HOME/bin
+              EXPOSE 8080
+              CMD ["catalina.sh","run"]
+
+
+    - name: Build an Image
+      shell: sudo docker build -t devopslab-image
+      args:
+        chdir: /home/ansibleadmin
+    - name: run the container
+      shell: sudo docker run -d --name devopslab-container -p 8080:8080 devopslab-image
+...

@@ -1,0 +1,23 @@
+---
+- name: This play is to download the latest war file from nexus
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: download the war file
+      shell: 'curl -u admin:admin123 -L "http://172.20.10.149:8081/service/rest/v1/search/assets/download?sort=version&repository=VinaysDevOpsLab-RELEASE&maven.groupId=com.vinaysdevopslab&maven.artifactId=VinayDevOpsLab&maven.extension=war" -H "accept: application/json" --output /home/ansibleadmin/latest.war'
+      args:
+        chdir: /home/ansibleadmin
+
+
+- name: Deploy the latest war file
+  hosts: tomcat
+  become: true
+  tasks:
+    - copy:
+       src: "{{ item }}"
+       dest: "/opt/apache-tomcat-9.0.40/webapps/"
+      with_fileglob:
+        - "/home/ansibleadmin/*.war"
+
+...

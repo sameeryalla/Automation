@@ -1,0 +1,1 @@
+This module creates Subnet resource. It accepts VPC_ID as input from VPC module and produces subnet_ID as output.

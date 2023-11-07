@@ -1,0 +1,1 @@
+This module creates VPC resource. It accepts cidr as input and produces VPC_ID as output.
